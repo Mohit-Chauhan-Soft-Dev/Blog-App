@@ -1,0 +1,26 @@
+<%- include('./partials/header') %>
+
+    <h1>Showing a particular Blog</h1>
+
+    <div id="show">
+
+        <!-- <h1><%=foundProduct.id%></h1> -->
+        <h1><b><u>Title:</u> </b>
+            <%=foundProduct.title%>
+        </h1>
+        <h3><u><b>Author:</u> </b>
+            <%=foundProduct.author%>
+        </h3>
+        <p>
+            <%=foundProduct.comment%>
+        </p>
+        <p><a href="/blogs"><button>Back</button></a></p>
+        <p><a href="/blogs/<%=foundProduct.id%>/edit"><button>Edit</button></a></p>
+        <p>
+        <form action="/blogs/<%=foundProduct.id%>?_method=DELETE" method="POST" style="text-align: center;">
+            <button type="submit">Delete</button>
+        </form>
+        </p>
+    </div>
+
+    <%- include('./partials/footer') %>
